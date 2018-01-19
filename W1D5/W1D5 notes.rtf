@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Data Structures\
+arrays, hashes, strings, class\
+\
+abstract data type: ADT. Set is an ADT. Set of collection of objects such that all are unique.\
+three operations: include, shovel, and delete. don\'92t include duplicates\
+\
+map/dictionary: set (key, value), get (key), and delete (key)\
+\
+certain algorithms work with abstract data types, that\'92s why important\
+\
+stack most simple data structure.\
+cafeteria trays stacked up. people take trays. lady puts new trays. people take more. lady puts more etc. must take from top. top ones are wet? Last in first out. stack supports push and pop. anything that can be done recursively can be done in stack. opposite of stack is Queue\
+\
+Queue. FIFO method.\
+Enqueue: get in line\
+Dequeue: get out line\
+can be implemented with array. \
+push/unshift for enqueue and shift/pop for dequeue\
+\
+Tree\
+binary tree: each node has at most two children, parent/child relationship. \
+Ternary tree: each node has at most three children\
+Unary tree: one child\
+n-ary tree or poly tree: many\
+\
+rooted at top element. leaf nodes are at bottom. \
+trees are good at modeling. \
+\
+building AI to solve tic tac toe\
+\
+two types of searches:\
+BFS: breadth first search. goes layer by layer\
+DFS: depth first search. goes straight to bottom (leaf node). find leaves as fast as possible. \
+\
+how to write: \
+BFS requires a queue. queue = [root]. until queue is empty? el=queue.shift. process!(el). el.children.each\{|child| queue << child\}\
+\
+DFS. if root is nil, return nil. if root.val == target then return root. this is the base case. Inductive step: if left or right side has value, then other side has it. \
+def dfs (root, target)\
+	return nil if root is nil\
+	return root if root.val is target\
+	root.children.each do |child|\
+		search_result = dfs(child, target)\
+			return search_result unless search_result.nil?\
+		end\
+	nil	\
+end\
+\
+trees store data in a hierarchy of layers. an element or node at each layer links to lower level nodes. advantage of BFS is that it considers shallower nodes before deeper ones.\
+\
+Diff b/w algorithm and method? algorithm is an idea, an unambiguous but unrealized process that solves a problem and which potentially could be written in any language. Method is implementation, conversion of an algorithm into Ruby code which can then be run. \
+\
+<head></head> contains important information about the page such as title, description, external style sheets, scripts, and more. does not belong in body. <meta> describes our websites to search engines, SEO. example:\
+\
+<head>\
+	<title>shakshuka recipe</title>\
+	<meta name=\'93description\'94 content=\'93the best, simple recipe for delicious middle easter shakshuka, a cumin spiced tomato sauce with salted onions and chili peppers topped with poached eggs.\'94>\
+</head>\
+\
+}
