@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 W2D4 Homework notes\
+\
+hash map. things that are built on hash maps.\
+concept of a set: curly braces \{\}, can\'92t have duplicate objects. no order. only have include? insert. and delete/remove. Abstract data type. all functions are O(n). these are not good ways to implement sets, just too slow. faster way to implement a set? \
+\
+look at the range between smallest and largest element. set an array of same indices. if 0 exists put true. 3 doesn\'92t so it\'92s false. all are default false. it\'92s true if the element is in the hash map. indexing into array s O(1). an array is contiguously stored data, which is why its faster. won\'92t work if you have arbitrarily large values. \
+\
+Resizing Set Part 1\
+fix the size of the set. put the values find a way to put them in a bucket and be able to find them in the bucket later on. use the modulo operator to do this. mod all the values into a bucket by one modulo. \
+\
+Resizing Set Part 2\
+if there are more numbers than buckets, computer will create a new bucket array with K + 1 as modulo and re mod everything. \
+\
+Hashing\
+takes input and output, given an input returns a certain output. we get random stuff out. hashing function is deterministic. any time you hash it you will get same output. uniformly distributed. its also one way: given the output, you can\'92t tell what the input is. hashing functions used: city hash, crc32, murmur hash, MD5 (not used anymore), SHA-2, blowfish, cryptographic hashing functions. build more complicated hash functions. \
+\
+Hash Set\
+put a value in the hash function, some random output, and mod it, then put in bucket. \
+\
+How the Hash Works in Ruby Reading\
+Hash is data structure that organizes data in key-value pairs (dictionary or associative array). stores so that enables efficient insertion and look in constant O(1) time. h = \{color: \'93black\}\'94, font: \'93Monaco\'94\}\
+\
+Problem F: LRU Caching\
+cache is things stored in memory used often. Least Recently Used Algorithm to remove things, throw out data least recently used. \
+\
+Dynamic Array Wiki\
+defined as random access, variable-size list data structure that allows elements to be added or removed. given w/ standard libraries. Dynamic arrays overcome limit of static arrays (fixed capacity that needs to be specified at allocation). the array holds the number of elements and extra positions as reserved or unused towards the end. when all spaces are taken up the array needs to be increased in size. resizing is expensive because creates new array and copying each element to new array. elements are removed from the end of}
